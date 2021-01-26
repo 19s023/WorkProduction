@@ -8,6 +8,18 @@ body {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media (max-width: $tb) {
+    body {
+      background-image: url("../../common/images/ground_tabret_fixed.svg");
+    }
+  }
+  @media (max-width: $sm) {
+    body {
+      background-image: url("../../common/images/ground_tabret_fixed.svg");
+    }
+  }
+
   .main {
     &__type {
       ul {
@@ -49,13 +61,4 @@ body {
     }
   }
 }
-@media (max-width: $tb) {
-  body {
-    background-image: url("../../common/images/ground_tabret_fixed.svg");
-  }
-}
-@media (max-width: $sm) {
-  body {
-    background-image: url("../../common/images/ground_tabret_fixed.svg");
-  }
-}
+

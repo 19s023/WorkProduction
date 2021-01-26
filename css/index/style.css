@@ -460,7 +460,7 @@ body .top--animal__kame img {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   html {
     height: 100%;
   }

@@ -4,7 +4,7 @@ function InitialSearch(){
 }
 function nameSearch (Initial){
 
-    fetch("https://workproduction.microcms.io/api/v1/date?limit=30&fields=id,name,img", {
+    fetch("https://workproduction.microcms.io/api/v1/date?limit=100&fields=id,name,img", {
         headers: {
             "X-API-KEY": "c2aa018e-aeb0-43c6-b6c2-e2bc343ab15e"
         }
@@ -311,6 +311,7 @@ function nameSearch (Initial){
             let individualAnimal = $("p", this).html();
 
             sessionStorage.setItem('animalInfo', individualAnimal);
+            console.log( individualAnimal );
             location.href="/afterSearch/animalInfo/animalInfo.html";
         });
 

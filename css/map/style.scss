@@ -9,7 +9,29 @@ body {
   background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
-  
+  background-attachment: fixed;
+
+  @media (max-width: $pc) {
+    body {
+      background-image: url("../../common/images/ground_tabretL_tizu.svg");
+    }
+  }
+  @media (max-width: $tb) {
+    body {
+      background-image: url("../../common/images/ground_tabret_tizu.svg");
+    }
+  }
+  @media (max-width: $tb_l) {
+    body {
+      background-image: url("../../common/images/ground_tabretL_tizu.svg");
+    }
+  }
+  @media (max-width: $sm) {
+    body {
+      background-image: url("../../common/images/ground_smartpone_tizu.svg");
+    }
+  }
+
   .main {
     // 日本地図
     &__map {
@@ -233,37 +255,22 @@ body {
       &--sent {
         margin: 50px 0;
         text-align: center;
-        input[type="submit"] {
-          font-size: 1.5rem;
-          font-weight: bold;
-          border: 2px solid #000;
-          padding: 5px 10px;
-          border-radius: 5px;
+        // input[type="submit"] {
+        //   font-size: 1.5rem;
+        //   font-weight: bold;
+        //   border: 2px solid #000;
+        //   padding: 5px 10px;
+        //   border-radius: 5px;
+        // }
+        img{
+          width: 100px;
+          height: auto;
+
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }
-  }
-}
-
-@media (max-width: $pc) {
-  body {
-    background-image: url("../../common/images/ground_tabretL_tizu.svg");
-  }
-}
-@media (max-width: $tb) {
-  body {
-    background-image: url("../../common/images/ground_tabret_tizu.svg");
-  }
-}
-
-@media (max-width: $tb_l) {
-  body {
-    background-image: url("../../common/images/ground_tabretL_tizu.svg");
-  }
-}
-
-@media (max-width: $sm) {
-  body {
-    background-image: url("../../common/images/ground_smartpone_tizu.svg");
   }
 }

@@ -1,5 +1,4 @@
 // 変数
-$sm_s: 380px; //iphone8などできれいに映る
 $sm: 450px; //iphone10などできれいに映る
 $tb: 768px;
 $tb_l: 850px; //768pxだとipadできれいにうつらないため
@@ -506,7 +505,7 @@ body {
   }
 }
 
-@media (max-width: $sm_s) {
+@media (max-width: $sm) {
   html {
     height: 100%;
     body {

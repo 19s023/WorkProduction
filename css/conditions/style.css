@@ -5,16 +5,25 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-body .main__type ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+
+@media (max-width: 768px) {
+  body body {
+    background-image: url("../../common/images/ground_tabret_fixed.svg");
+  }
 }
+
+@media (max-width: 450px) {
+  body body {
+    background-image: url("../../common/images/ground_tabret_fixed.svg");
+  }
+}
+
+body .main__type ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 body .main__type ul li {
   width: 250px;
   padding: 20px 10px;
@@ -28,33 +37,26 @@ body .main__type ul li {
 body .main__type ul li:hover {
   cursor: pointer;
 }
+
 @media (max-width: 450px) {
   body .main__type ul li {
     width: 100%;
     margin: 20px;
   }
 }
+
 body .main__type ul li img {
   width: 80px;
   height: 80px;
 }
+
 @media (max-width: 450px) {
   body .main__type ul li img {
     width: 160px;
     height: 160px;
   }
 }
+
 body .main__type ul li p {
   margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  body {
-    background-image: url("../../common/images/ground_tabret_fixed.svg");
-  }
-}
-@media (max-width: 450px) {
-  body {
-    background-image: url("../../common/images/ground_tabret_fixed.svg");
-  }
 }

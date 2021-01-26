@@ -2,11 +2,10 @@ let checkInspection;
 let checkI = [];
 let contents;
 
-
 // mapSelect選択情報取得
 function mapDateSelect(click_class){
     // CMS接続
-    fetch("https://workproduction.microcms.io/api/v1/date?limit=30", {
+    fetch("https://workproduction.microcms.io/api/v1/date?limit=100", {
         headers: {
             "X-API-KEY": "c2aa018e-aeb0-43c6-b6c2-e2bc343ab15e"
         }
@@ -16,10 +15,12 @@ function mapDateSelect(click_class){
 
         contents = json.contents;
         let animalInfo;
+        let animalCount = 0;
 
         for( let i = 0; contents.length > i; i++ ){
             if( contents[i].prefectureen == click_class.className ){
                 animalInfo += '<li><img src="'+ contents[i].img.url +'"><p class="animalName">'+ contents[i].name +'</p></li>';
+                animalCount++;
             }
         }
 
@@ -27,7 +28,11 @@ function mapDateSelect(click_class){
         let nAnimalInfo = ("" + animalInfo).replace("undefined","");
 
         sessionStorage.setItem('animalInfo', nAnimalInfo);
-        location.href="/afterSearch/searchResults/searchResults.html";
+        if( animalCount > 0 ){
+            location.href="/afterSearch/searchResults/searchResults.html";
+        } else {
+            alert("対象の動物がいません");
+        }
     });
 }
 
@@ -43,7 +48,7 @@ function mapDateCheckbox(){
     }
 
     // CMS接続
-    fetch("https://workproduction.microcms.io/api/v1/date?limit=30", {
+    fetch("https://workproduction.microcms.io/api/v1/date?limit=100", {
         headers: {
             "X-API-KEY": "c2aa018e-aeb0-43c6-b6c2-e2bc343ab15e"
         }
@@ -53,11 +58,13 @@ function mapDateCheckbox(){
 
         contents = json.contents;
         let animalInfo;
+        let animalCount = 0;
 
         for( let i = 0; contents.length > i; i++ ){
             for( let j = 0; checkI.length > j; j++ ){
                 if( contents[i].prefectureen == checkI[j] ){
                     animalInfo += '<li><img src="'+ contents[i].img.url +'"><p class="animalName">'+ contents[i].name +'</p></li>';
+                    animalCount++;
                 }
             }
         }
@@ -66,7 +73,11 @@ function mapDateCheckbox(){
         let nAnimalInfo = ("" + animalInfo).replace("undefined","");
 
         sessionStorage.setItem('animalInfo', nAnimalInfo);
-        location.href="/afterSearch/searchResults/searchResults.html";
+        if( animalCount > 0 ){
+            location.href="/afterSearch/searchResults/searchResults.html";
+        } else {
+            alert("対象の動物がいません");
+        }
     });
 }
 

@@ -1,5 +1,5 @@
 // CMS接続
-fetch("https://workproduction.microcms.io/api/v1/date?limit=30", {
+fetch("https://workproduction.microcms.io/api/v1/date?limit=100", {
     headers: {
         "X-API-KEY": "c2aa018e-aeb0-43c6-b6c2-e2bc343ab15e"
     }
@@ -17,6 +17,13 @@ fetch("https://workproduction.microcms.io/api/v1/date?limit=30", {
     // 不要に入った文字列削除
     let nAnimalInfo = ("" + animalInfo).replace("undefined","");
 
-    sessionStorage.setItem('animalInfo', nAnimalInfo);
-    location.href="/afterSearch/searchResults/searchResults.html";
+    $('.main__each').append( nAnimalInfo );
+
+    $('.main__each li').on("click", function(){
+        let individualAnimal = $("p", this).html();
+
+        sessionStorage.setItem('animalInfo', animalInfo);
+        sessionStorage.setItem('thisAnimalInfo', individualAnimal);
+        location.href="/afterSearch/animalInfo/animalInfo.html";
+    });
 });
