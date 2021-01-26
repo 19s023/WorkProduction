@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="ら行.svg"
    viewBox="0 0 417.9971 200"
    height="200"
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -31,15 +31,15 @@
   <sodipodi:namedview
      inkscape:current-layer="layer4"
      inkscape:window-maximized="1"
-     inkscape:window-y="-9"
-     inkscape:window-x="-9"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
      inkscape:cy="175.94369"
-     inkscape:cx="176.95967"
+     inkscape:cx="97.547867"
      inkscape:zoom="1.4040734"
      showgrid="false"
      id="namedview12"
-     inkscape:window-height="1001"
-     inkscape:window-width="1920"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -47,7 +47,8 @@
      objecttolerance="10"
      borderopacity="1"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
   <g
      inkscape:label="Image 1"
      id="layer1"
@@ -176,18 +177,8 @@
   <g
      inkscape:label="Image 4"
      id="layer4"
-     inkscape:groupmode="layer">
-    <text
-       id="text21577"
-       y="144.33598"
-       x="67.368538"
-       style="font-size:118.095px;line-height:1.25;font-family:'Corporate Logo Rounded';-inkscape-font-specification:'Corporate Logo Rounded';stroke-width:2.95238"
-       xml:space="preserve"><tspan
-         style="stroke-width:2.95238"
-         y="144.33598"
-         x="67.368538"
-         id="tspan21575"
-         sodipodi:role="line">ら</tspan></text>
+     inkscape:groupmode="layer"
+     style="display:inline">
     <path
        id="path21579"
        d="m 84.337149,79.780966 c -4.660211,-0.118441 -8.55741,3.794625 -8.297565,8.500657 -0.284405,9.021207 -0.999535,18.237937 0.390882,27.172617 2.368428,5.56482 10.09175,7.05981 14.783994,3.44561 9.26503,-5.15231 19.18181,-13.08426 30.46382,-10.8084 8.75381,2.01556 11.07761,16.05419 2.37312,19.87103 -11.16471,5.37098 -23.64745,1.08311 -35.389502,3.22305 -7.046646,2.63917 -6.44663,14.33481 0.584237,16.76484 11.658465,3.55188 24.424945,2.46774 36.105885,-0.50217 10.26607,-2.44279 20.02619,-9.48313 22.65173,-20.14368 3.89897,-13.31117 -2.11347,-29.594637 -15.47346,-34.940472 -7.52968,-3.487494 -16.25465,-2.447886 -24.24496,-1.507607 -4.73845,0.882056 -8.984613,3.326279 -12.901917,6.03434 -0.668173,-5.406345 0.92677,-13.450049 -5.415327,-16.051232 -1.755734,-0.794938 -3.70865,-1.140123 -5.630937,-1.058583 z"

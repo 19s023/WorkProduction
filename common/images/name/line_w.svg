@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="わ行.svg"
    viewBox="0 0 417.9971 200"
    height="200"
@@ -22,24 +22,24 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs14" />
   <sodipodi:namedview
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer4"
      inkscape:window-maximized="1"
-     inkscape:window-y="-9"
-     inkscape:window-x="-9"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
      inkscape:cy="177.36812"
      inkscape:cx="176.95967"
      inkscape:zoom="1.4040734"
      showgrid="false"
      id="namedview12"
-     inkscape:window-height="1001"
-     inkscape:window-width="1920"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -47,7 +47,8 @@
      objecttolerance="10"
      borderopacity="1"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
   <g
      inkscape:label="Image 1"
      id="layer1"
@@ -177,17 +178,6 @@
      inkscape:label="Image 4"
      id="layer4"
      inkscape:groupmode="layer">
-    <text
-       id="text21585"
-       y="144.40071"
-       x="61.481964"
-       style="font-size:121.025px;line-height:1.25;font-family:'Corporate Logo Rounded';-inkscape-font-specification:'Corporate Logo Rounded';stroke-width:3.02565"
-       xml:space="preserve"><tspan
-         style="stroke-width:3.02565"
-         y="144.40071"
-         x="61.481964"
-         id="tspan21583"
-         sodipodi:role="line">わ</tspan></text>
     <path
        id="path21587"
        d="m 94.17877,50.911282 c -5.208912,-0.227142 -10.153889,4.220631 -9.19896,9.655222 -0.80114,2.758398 1.720917,8.771421 -1.445292,9.134677 -5.927583,-0.0573 -14.763948,-0.269308 -16.618778,6.899863 -1.460885,5.517081 0.849853,12.959093 7.398951,13.475023 3.475482,0.713025 7.079297,0.389067 10.566355,0.632924 -5.608278,10.783039 -14.911892,19.385069 -19.940586,30.479119 -1.984852,6.84608 7.286447,13.64515 13.111961,9.74842 2.967422,-2.31435 4.790346,-6.70587 6.749336,-9.04316 0.612041,9.02264 -0.660807,18.29608 1.143436,27.17261 4.257271,6.29925 16.028887,5.01638 18.144347,-2.3397 0.13438,-14.62404 0.26899,-29.24807 0.40381,-43.8721 4.56779,-6.840321 12.14201,-14.326461 21.0868,-12.563893 5.70449,2.750466 5.03191,10.404403 5.55999,15.579673 0.67717,7.84941 -1.3811,17.11013 -9.26433,20.65419 -5.23432,2.19983 -11.64495,6.14995 -10.78475,12.7642 -0.4221,6.66816 7.4498,10.5133 13.05214,7.8886 14.33054,-3.4964 25.52378,-16.39148 26.80711,-31.1069 1.28676,-14.01287 0.35044,-30.161135 -9.75432,-40.978287 -4.69584,-5.123082 -11.7009,-7.236583 -18.51338,-6.433568 -7.07326,-0.34633 -13.14643,4.082635 -18.21152,8.507612 -0.68916,-7.394864 0.83899,-15.255775 -1.48981,-22.381864 -1.90135,-2.811828 -5.544481,-3.945793 -8.80251,-3.872661 z"

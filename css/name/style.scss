@@ -15,32 +15,28 @@ body {
 
     // あかさたな　選択
     &__line {
+      width: 100%;
       display: none;
 
       // 行　選択
       &--select {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         li {
           padding: 0 10px;
           font-size: 2rem;
           height: 100%;
 
-          img{
+          img {
             width: 60px;
 
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
           }
         }
-      }
-
-      // 行　結果
-      &--name {
-        padding-top: 50px;
-        font-size: 2.5rem;
       }
     }
 
@@ -60,4 +56,3 @@ body {
     background-image: url("../../common/images/ground_tabret_fixed.svg");
   }
 }
-
