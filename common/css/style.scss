@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-@import url(sanitize/sanitize.css);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-@import url(animateCss/animate.min.css);
-
-@font-face{
-    font-family: 'MyFont';
-    src: url('font/corp_round_v1.ttf');
+@font-face {
+  font-family: "MyFont";
+  src: url("font/corp_round_v1.ttf");
 }
 
 // 変数
@@ -14,255 +10,257 @@ $sm: 450px;
 $tb: 768px;
 $pc: 980px;
 
-html{
-    font-size: 62.5%;   // 基本フォントサイズ10px
+html {
+  font-size: 62.5%; // 基本フォントサイズ10px
 }
 
 // ハンバーガーメニューアニメーション時Iosスクロールさせない
-.bodyActive{
-    overflow-y: hidden;
-    position: fixed;
+.bodyActive {
+  overflow-y: hidden;
+  position: fixed;
 }
 
-body{
-    font-family: 'Noto Sans Japanese', serif;
-    font-family: MyFont;
-    font-size: 1.6rem;
-    margin: 0;
+body {
+  font-family: "Noto Sans Japanese", serif;
+  font-family: MyFont;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+  max-width: 100vw;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none; // 初期underbar削除
+    color: #000;
+  }
+
+  ul {
     padding: 0;
-    background-color: #EEEEEE;
-    max-width: 100vw;
+    list-style-type: none;
+  }
 
-    *,*::before, *::after{
-        box-sizing: border-box;
+  input[type="submit"] {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  }
+
+  // サイト読み込み時無駄なアニメーション実行を行わないようにする
+  .preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  // ハンバーガーメニュー
+  .Toggle {
+    display: none;
+    position: fixed; /* bodyに対しての絶対位置指定 */
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+
+    @media screen and (max-width: $pc) {
+      display: inline-block;
     }
 
-    a{
-        text-decoration: none;  // 初期underbar削除
-        color: #000;
-    }
+    span {
+      display: block;
+      position: absolute;
+      width: 40px;
+      border-bottom: solid 4px #333;
+      -webkit-transition: 0.35s ease-in-out;
+      -moz-transition: 0.35s ease-in-out;
+      transition: 0.35s ease-in-out;
 
-    ul{
-        padding: 0;
-        list-style-type: none;
-    }
-
-    input[type=submit]{
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        padding: 0;
-        appearance: none;
-    }
-
-    // サイト読み込み時無駄なアニメーション実行を行わないようにする
-    .preload * {
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -ms-transition: none !important;
-        -o-transition: none !important;
-        transition: none !important;
-    }
-
-    // ハンバーガーメニュー
-    .Toggle {
-        display: none;
-        position: fixed;    /* bodyに対しての絶対位置指定 */
-        width: 50px;
-        height: 50px;
-        z-index: 2;
-        top: 20px;
-        right:10px;
-        cursor: pointer;
-
-        @media screen and ( max-width: $pc ){
-            display: inline-block;
-        }
-
-        span {
-            display: block;
-            position: absolute;
-            width: 40px;
-            border-bottom: solid 4px #333;
-            -webkit-transition: .35s ease-in-out;
-            -moz-transition: .35s ease-in-out;
-            transition: .35s ease-in-out;
-
-            &:nth-child(1) {
-                top:5px;
-            }
-            &:nth-child(2) {
-                top: 18px;
-            }
-            &:nth-child(3) {
-                top: 32px;
-            }
-        }
-    }
-
-    .Toggle.active span:nth-child(1) {
+      &:nth-child(1) {
+        top: 5px;
+      }
+      &:nth-child(2) {
         top: 18px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+      }
+      &:nth-child(3) {
+        top: 32px;
+      }
+    }
+  }
+
+  .Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .Toggle.active span:nth-child(2),
+  .Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  // ヘッダー
+  .header {
+    max-height: 150px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $pc) {
+      width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      transform: translateY(-110vh);
+      transition: all 0.5s;
+      justify-content: space-around;
+      flex-direction: column;
+      position: fixed;
+      background: #d07d3e;
+      background-image: url(../images/hamburgerMenu.svg);
+      background-position: 0 20px 0 0;
     }
 
-    .Toggle.active span:nth-child(2),
-    .Toggle.active span:nth-child(3) {
-        top: 18px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
+    @media (max-width: $tb) {
+      background-size: 100% 100%;
+      background-position: center;
     }
 
+    &--titleLogo {
+      width: 0px;
+      margin: -30px 0 0 15px;
 
-    // ヘッダー
-    .header{
-        max-height: 150px;
-        z-index: 1;
+      @media (max-width: $pc) {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      img {
+        width: auto;
+        height: 200px;
+      }
+    }
+    &--pageLink,
+    ul {
+      padding-right: 50px;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $pc) {
+        padding: 0;
         display: flex;
+        flex-direction: column;
+      }
+
+      li {
+        font-size: 20px;
+        padding: 0 15px;
+
+        @media (max-width: $pc) {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  // メイン
+  .main {
+    width: $pc;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @media (max-width: $tb) {
+      width: $tb;
+      padding: 0 30px;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    h1 {
+      padding: 20px;
+      margin: 0;
+    }
+
+    // 検索語　検索一致動物　一覧　デザイン
+    &__each {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 0 5px;
+
+      @media (max-width: $tb) {
         justify-content: space-between;
+      }
 
-        @media (max-width:$pc){
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0;
+      }
+
+      li {
+        border: 2px solid #000;
+        margin: 20px;
+        background-color: #fff;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        @media (max-width: $tb) {
+          width: 49%;
+          margin: 5px 0;
+        }
+
+        img {
+          width: 240px;
+          height: 300px;
+          object-fit: cover;
+          object-position: top center;
+
+          @media (max-width: $tb) {
             width: 100%;
-            height: 100vh;
-            max-height: 100vh;
-            transform: translateY(-110vh);
-            transition: all .5s;
-            justify-content: space-around;
-            flex-direction: column;
-            position: fixed;
-            background: #D07D3E;
-            background-image: url(../images/hamburgerMenu.svg);
-            background-position: 0 20px 0 0;
-        }
-
-        @media (max-width:$tb) {
-            background-size: 100% 100%;
-            background-position: center;
-        }
-
-        &--titleLogo{
-            width: 0px;
-            margin: -30px 0 0 15px;
-
-            @media(max-width:$pc){
-                width: 100%;
-                margin: 0;
-                text-align: center;
-            }
-
-            img{
-                width: auto;
-                height: 200px;
-            }
-        }
-        &--pageLink, ul{
-            padding-right: 50px;
-            list-style-type: none;
-            display: flex;
-            align-items: center;
-
-            @media (max-width:$pc){
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-            }
-
-            li{
-                font-size: 20px;
-                padding: 0 15px;
-
-                @media (max-width:$pc){
-                    padding: 15px 0;
-                }
-            }
-        }
-    }
-
-    .active{
-        transform: translateX(0);
-    }
-
-    // メイン
-    .main{
-        width: $pc;
-        padding: 0 50px;
-        margin: 0 auto;
-
-        @media (max-width: $tb ){
-            width: $tb;
-            padding: 0 30px;
-        }
-
-        @media (max-width: $sm ){
-            max-width: 100%;
-            padding: 0 10px;
-        }
-
-        h1{
-            padding: 20px;
-            margin: 0;
-        }
-
-        // 検索語　検索一致動物　一覧　デザイン
-        &__each{
+            height: 300px;
+          }
+          @media (max-width: $sm) {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            padding: 0 5px;
-
-            @media(max-width:$tb){
-                justify-content: space-between;
-            }
-
-            &:after{
-                content: "";
-                display: block;
-                width: 100%;
-                height: 0;
-            }
-
-            li{
-                border: 2px solid #000;
-                margin: 20px;
-                background-color: #fff;
-
-                &:hover{
-                    cursor: pointer;
-                }
-
-                @media (max-width:$tb){
-                    width: 49%;
-                    margin: 5px 0;
-                }
-
-                img{
-                    width: 240px;
-                    height: 300px;
-                    object-fit: cover;
-                    object-position: top center;
-
-                    @media (max-width:$tb){
-                        width: 100%;
-                        height: 300px;
-                    }
-                    @media (max-width:$sm){
-                        width: 100%;
-                        height: 200px;
-                    }
-                }
-
-                p{
-                    text-align: center;
-
-                    @media (max-width:$sm){
-                        margin: 5px 0;
-                    }
-                }
-            }
+            height: 200px;
+          }
         }
+
+        p {
+          text-align: center;
+
+          @media (max-width: $sm) {
+            margin: 5px 0;
+          }
+        }
+      }
     }
+  }
 }
